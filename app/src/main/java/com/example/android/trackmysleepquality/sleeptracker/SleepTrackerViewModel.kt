@@ -40,7 +40,7 @@ class SleepTrackerViewModel(
         viewModelJob.cancel()
     }
 
-    private val nights = database.getAllNights()
+    val nights = database.getAllNights()
 
     //Defining Coroutine Scope
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
